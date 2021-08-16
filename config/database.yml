@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: FARMILY_development
+  database: farmily_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: FARMILY_production
-  username: FARMILY
+  database: farmily_production
+  username: farmily
   password: <%= ENV['FARMILY_DATABASE_PASSWORD'] %>
