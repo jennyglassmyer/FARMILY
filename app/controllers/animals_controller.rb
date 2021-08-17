@@ -41,7 +41,8 @@ class AnimalsController < ApplicationController
       :age,
       :price_per_day,
       :care_instructions,
-      :photo
+      :photo,
+      :title, :body, photos: []
       )
   end
 end
