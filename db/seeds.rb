@@ -62,7 +62,7 @@ animal1 = Animal.create!(
 
   file = URI.open('https://images.unsplash.com/photo-1622037088021-26eb84ef2389?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 
-  animal1.photo.attach(io: file, filename: 'horse.jpg', content_type: 'image/jpg')
+  animal1.photos.attach(io: file, filename: 'horse.jpg', content_type: 'image/jpg')
 
 
   animal2 = Animal.create!(
@@ -81,7 +81,7 @@ animal1 = Animal.create!(
   file = URI.open('https://images.unsplash.com/photo-1627930738037-9127714a9434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
 ')
 
-  animal2.photo.attach(io: file, filename: 'pig.jpg', content_type: 'image/jpg')
+  animal2.photos.attach(io: file, filename: 'pig.jpg', content_type: 'image/jpg')
 
 
   animal3 = Animal.create!(
@@ -100,7 +100,7 @@ animal1 = Animal.create!(
 
   file = URI.open('https://images.unsplash.com/photo-1501820488136-72669149e0d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
 
-  animal3.photo.attach(io: file, filename: 'cat.jpg', content_type: 'image/jpg')
+  animal3.photos.attach(io: file, filename: 'cat.jpg', content_type: 'image/jpg')
 
 
   animal4 = Animal.create!(
@@ -119,4 +119,4 @@ animal1 = Animal.create!(
 
   file = URI.open('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80')
 
-  animal4.photo.attach(io: file, filename: 'cow.jpg', content_type: 'image/jpg')
+  animal4.photos.attach(io: file, filename: 'cow.jpg', content_type: 'image/jpg')
