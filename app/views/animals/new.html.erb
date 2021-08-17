@@ -2,12 +2,12 @@
 
 <%= simple_form_for [@animal] do |f| %>
   <%= f.input :name %>
-  <%= f.input :species %>
+  <%= f.input :species, :collection => %w[Horse Cow Pig Dog Chicken Cat Goat Sheep Duck Goose] %>
   <%= f.input :breed %>
-  <%= f.input :gender %>
+  <%= f.input :gender, :collection => %w[Male Femal] %>
   <%= f.input :personality %>
   <%= f.input :description %>
-  <%= f.input :care_level %>
+  <%= f.input :care_level, :collection => %w[Easy Medium Hard] %>
   <%= f.input :age %>
   <%= f.input :price_per_day %>
   <%= f.input :care_instructions %>
