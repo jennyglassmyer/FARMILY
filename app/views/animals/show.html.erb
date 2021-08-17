@@ -1,6 +1,6 @@
 <h1> <%= link_to"〈", root_path %> Meet <%= @animal.name %></h1>
 
- <p>Owner: <%= @animal.user.first_name %> <%= @animal.user.last_name %></p>
+ <p>Owner: <%= @animal.user.first_name %> <%= @user.last_name %></p>
  <p>Name: <%= @animal.name %></p>
  <p>Species: <%= @animal.species %></p>
  <% if @animal.breed == "" %>
