@@ -1,0 +1,10 @@
+<h1>Create New Booking</h1>
+
+<%= simple_form_for [@animal, @booking] do |f| %>
+  <%= f.input :date_start %>
+  <%= f.input :date_end %>
+  <%= f.input :total_price %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to Animal Page", animal_path(@animal) %>
