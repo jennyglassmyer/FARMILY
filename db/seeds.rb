@@ -1,3 +1,7 @@
+require "open-uri"
+Animal.destroy_all
+User.destroy_all
+
 user_1 = User.create!(
   first_name: "Marie",
   last_name: "Hasselberg",
@@ -43,12 +47,12 @@ user_4 = User.create!(
 )
 
 animal1 = Animal.create!(
-  name: "Rudi", 
-  species: "Horse", 
-  breed: "Trakehner", 
-  gender: "Male", 
+  name: "Rudi",
+  species: "Horse",
+  breed: "Trakehner",
+  gender: "Male",
   personality: "Empathetic",
-  description: "An attentive companion, very smart and entertaining", 
+  description: "An attentive companion, very smart and entertaining",
   care_level: 9,
   age: 5,
   price_per_day: 150,
@@ -56,10 +60,15 @@ animal1 = Animal.create!(
   user: user_1
   )
 
+  file = URI.open('https://images.unsplash.com/photo-1622037088021-26eb84ef2389?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
+
+  animal1.photo.attach(io: file, filename: 'horse.jpg', content_type: 'image/jpg')
+
+
   animal2 = Animal.create!(
-  name: "Boris", 
-  species: "Pig", 
-  gender: "Male", 
+  name: "Boris",
+  species: "Pig",
+  gender: "Male",
   personality: "Funny",
   description: "A mate who rolls with joy and is very clean.",
   care_level: 5,
@@ -69,11 +78,17 @@ animal1 = Animal.create!(
   user: user_2
   )
 
+  file = URI.open('https://images.unsplash.com/photo-1627930738037-9127714a9434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
+')
+
+  animal2.photo.attach(io: file, filename: 'pig.jpg', content_type: 'image/jpg')
+
+
   animal3 = Animal.create!(
-  name: "Isabelle", 
-  species: "Cat", 
+  name: "Isabelle",
+  species: "Cat",
   breed: "Maine Coon",
-  gender: "Female", 
+  gender: "Female",
   personality: "Cuddly and strong-willed",
   description: "An elegant lady who gives you a smile and makes your days happy.",
   care_level: 3,
@@ -83,11 +98,16 @@ animal1 = Animal.create!(
   user: user_3
   )
 
+  file = URI.open('https://images.unsplash.com/photo-1501820488136-72669149e0d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
+
+  animal3.photo.attach(io: file, filename: 'cat.jpg', content_type: 'image/jpg')
+
+
   animal4 = Animal.create!(
-  name: "Ella", 
-  species: "Cow", 
+  name: "Ella",
+  species: "Cow",
   breed: "Jersey",
-  gender: "Female", 
+  gender: "Female",
   personality: "Kind and wise",
   description: "A great milk cow!",
   care_level: 3,
@@ -97,4 +117,6 @@ animal1 = Animal.create!(
   user: user_4
   )
 
-  
+  file = URI.open('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80')
+
+  animal4.photo.attach(io: file, filename: 'cow.jpg', content_type: 'image/jpg')
