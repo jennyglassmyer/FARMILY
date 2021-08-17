@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
-  
   def index
     @bookings = Booking.where("user = current_user")
   end
@@ -8,7 +7,7 @@ class BookingsController < ApplicationController
   def show
     @animal = Animal.find(params[:animal_id])
   end
-  
+
   def new
     @booking = Booking.new
     @animal = Animal.find(params[:animal_id])
