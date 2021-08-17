@@ -13,5 +13,6 @@
  <p>Age: <%= @animal.age %></p>
  <p>Price per day: <%= @animal.price_per_day %></p>
  <p>Care instructions: <%= @animal.care_instructions %></p>
+ <%= cl_image_tag @animal.photo.key, height: 300, width: 400, crop: :fill %>
 
  <%= link_to "<Back to homepage", root_path %>
