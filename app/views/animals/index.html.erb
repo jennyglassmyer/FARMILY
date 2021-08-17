@@ -1,2 +1,11 @@
 <h1>Farm Animals for Rent</h1>
 
+<ul>
+<% @animals.each do |animal| %>
+<li><%= link_to animal.name, animal_path(animal)%></li>
+<% end %>
+</ul>
+
+<%= link_to "Add New Animal", new_animal_path %>
+
+
