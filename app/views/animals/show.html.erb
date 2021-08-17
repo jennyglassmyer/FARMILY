@@ -1,1 +1,17 @@
-<h1><%= @animal.name %></h1>
+<h1>Your <%= @animal.species.downcase %> <%= @animal.name %></h1>
+
+ <p>Name: <%= @animal.name %></p>
+ <p>Species: <%= @animal.species %></p>
+ <% if @animal.breed == "" %>
+ <% else %>
+   <p>Breed: <%= @animal.breed %></p>
+ <% end %>
+ <p>Gender: <%= @animal.gender %></p>
+ <p>Personality: <%= @animal.personality %></p>
+ <p>Description: <%= @animal.description %></p>
+ <p>Care level: <%= @animal.care_level %></p>
+ <p>Age: <%= @animal.age %></p>
+ <p>Price per day: <%= @animal.price_per_day %></p>
+ <p>Care instructions: <%= @animal.care_instructions %></p>
+
+ <%= link_to "<Back to homepage", root_path %>
