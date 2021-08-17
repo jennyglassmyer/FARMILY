@@ -10,11 +10,11 @@
       <%= simple_form_for [@animal, @booking] do |f| %>
       <%= f.input :date_start, label: "Date of Pickup" %>
       <%= f.input :date_end, label: "Date of Drop Off" %>
+      <%= f.submit %>
+      <% end %>
   </li>
   <li>Location: <%= @animal.user.street %> <%= @animal.user.house_number %>, <%= @animal.user.city %>, <%= @animal.user.post_code %></li>
   <li>What to Expect: <%= @animal.description %></li>
   <li>Price Per Day: <%= @animal.price_per_day %>€</li>
-      <%= f.submit %>
-      <% end %>
 </ul>
 
