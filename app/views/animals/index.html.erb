@@ -1,11 +1,21 @@
-<h1>Farm Animals for Rent</h1>
 
-<ul>
-<% @animals.each do |animal| %>
-<li><%= link_to animal.name, animal_path(animal)%></li>
-<% end %>
-</ul>
+<div class="header-container">
+  <div class="banner">
+    <img src="/assets/goat.jpg"  class="img-banner" alt="">
+  </div>
+  <div class="header-text">
+    <h1 class="header-h1">Did you ever take a goat on a stroll through Görlitzer Park?</h1>
+    <h4 class="header-h4">Rent a farm animal and create a unqiue, cuddly experience</h4>
+  </div>
+</div>
 
-<%= link_to "Add New Animal", new_animal_path %>
+<h2 class="home-h3">These animals are cute, available and near you</h2>
+<div class="container">
+      <ul class = cards>
+      <% @animals.each do |animal| %>
+      <li class="card" style="background-image: url(/assets/sheep-crop.png)"><%= link_to animal.name, animal_path(animal)%></li>
+      <% end %>
+      </ul>
+  </div>
 
-
+      <%# <%= link_to "Add New Animal", new_animal_path %>
