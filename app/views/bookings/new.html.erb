@@ -1,10 +1,20 @@
-<h1>Create New Booking</h1>
-
-<%= simple_form_for [@animal, @booking] do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.input :total_price %>
-  <%= f.submit %>
-<% end %>
+<h1>Create New Booking for <%= @animal.name %></h1>
 
 <%= link_to "Back to Animal Page", animal_path(@animal) %>
+<p>Make your booking and create a unqiue experience with a lovely farm animal.</p>
+
+<h2>Your Booking Details</h2>
+<ul>
+  <li>Farm Animal: <%= @animal.name %></li>
+  <li> 
+      <%= simple_form_for [@animal, @booking] do |f| %>
+      <%= f.input :date_start, label: "Date of Pickup" %>
+      <%= f.input :date_end, label: "Date of Drop Off" %>
+      <%= f.submit %>
+      <% end %>
+  </li>
+  <li>Location: <%= @animal.user.street %> <%= @animal.user.house_number %>, <%= @animal.user.city %>, <%= @animal.user.post_code %></li>
+  <li>What to Expect: <%= @animal.description %></li>
+  <li>Price Per Day: <%= @animal.price_per_day %>€</li>
+</ul>
+
