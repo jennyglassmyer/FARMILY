@@ -1,5 +1,5 @@
 class Animal < ApplicationRecord
-  has_one_attached :photo
+  has_many_attached :photos
   has_many :bookings
   belongs_to :user
   validates :species, inclusion: { in: ["Horse", "Cow", "Pig", "Dog", "Chicken", "Cat", "Goat", "Sheep", "Duck", "Goose"] }
