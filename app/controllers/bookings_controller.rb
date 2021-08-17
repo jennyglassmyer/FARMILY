@@ -1,6 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show]
+  before_action :set_booking, only: [:show, :destroy]
+  
   def index
+    @bookings = Booking.where("user = current_user")
   end
 
   def show
@@ -27,6 +29,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to animal_bookings_path(@booking.animal), notice: 'Booking was canceled.'
   end
 
   private
