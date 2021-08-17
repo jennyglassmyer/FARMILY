@@ -1,0 +1,84 @@
+$iris: #5D5FEF;
+$berbel: #7879F1;
+$fuscia: #FCDDEC;
+$dark: rgb(73, 73, 73);
+
+.header-container {
+  position: relative;
+  text-align: center;
+  color: $berbel;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header-h1{
+  font-family: Roboto;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-h4{
+  font-family: Roboto;
+  font-weight: lighter;
+  text-align: center;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-h3{
+  font-family: Roboto;
+  font-weight: bold;
+  text-align: center;
+  color: $dark;
+  padding-top: 20px;
+}
+
+.cards {
+  flex-grow: 1;
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 30rem;
+  border-radius: 10px;
+  margin: 15px 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+a {
+  color:white;
+}
+
+.banner{
+  background-image: asset-url('field.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
