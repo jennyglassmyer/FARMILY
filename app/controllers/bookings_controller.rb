@@ -1,3 +1,5 @@
+require 'date'
+
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
   
@@ -18,12 +20,15 @@ class BookingsController < ApplicationController
     @animal = Animal.find(params[:animal_id])
     @user = current_user
     @booking = Booking.new(
-      date_start: booking_params[:date_start],
-      date_end: booking_params[:date_end],
-      total_price: booking_params[:total_price],
+      date_start: Date.new(params["booking"]["date_start(1i)"].to_i, params["booking"]["date_start(2i)"].to_i, params["booking"]["date_start(3i)"].to_i),
+      date_end: Date.new(params["booking"]["date_end(1i)"].to_i, params["booking"]["date_end(2i)"].to_i, params["booking"]["date_end(3i)"].to_i),
       animal: @animal,
       user: @user
     )
+    
+    @total_price = calculate_total(@booking.date_start, @booking.date_end, @booking.animal.price_per_day)
+    @booking.total_price = @total_price
+
     if @booking.save
       redirect_to animal_booking_path(@animal, @booking)
     else
@@ -43,6 +48,11 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date_start, :date_end, :total_price)
+    params.require(:booking).permit(params["booking"]["date_start(1i)"].to_i, params["booking"]["date_start(2i)"].to_i, params["booking"]["date_start(3i)"].to_i, params["booking"]["date_end(1i)"].to_i, params["booking"]["date_end(2i)"].to_i, params["booking"]["date_end(3i)"].to_i)
+  end
+
+  def calculate_total(date_start, date_end, price_per_day)
+    num_of_days = date_end - date_start
+    num_of_days * price_per_day
   end
 end
