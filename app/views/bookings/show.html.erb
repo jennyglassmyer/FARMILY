@@ -1,0 +1,12 @@
+<h1>You and <%= @animal.name %> are going on an adventure together!</h1>
+<h2>Your booking has been succesful.</h2>
+<h2>Now put down the dates in your calendar. <%= @animalname %> does not like to wait for humans. </h2>
+
+<ul>
+  <li>Start Date: <%= @booking.date_start %></li>
+  <li>End Date: <%= @booking.date_end %></li>
+  <li>Pick Up and Drop Off: <%= @animal.user.street %> <%= @animal.user.house_number %> </li>
+  <li>Owner Name: <%= @animal.user.first_name %> <%= @animal.user.last_name %></li>
+</ul>
+
+<%= link_to "Book more fun experiences with animals", root_path %>
