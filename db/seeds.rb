@@ -118,6 +118,6 @@ animal1 = Animal.create(
   user_id: user_4.id
   )
 
-  file = URI.open('https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80')
+  file = URI.open('https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=842&q=80')
 
   animal4.photos.attach(io: file, filename: 'cow.jpg', content_type: 'image/jpg')
