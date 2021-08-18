@@ -12,8 +12,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' unless params[:controller] = "animals" && params[:action] = "index" %>
-    <%= render 'shared/hovering_navbar' %>
+    <% if params[:controller] == "animals" && params[:action] == "index" %>
+      <%= render 'shared/hovering_navbar' %>
+    <% else %>
+     <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
     <%= render 'shared/flashes' %>
   </body>
