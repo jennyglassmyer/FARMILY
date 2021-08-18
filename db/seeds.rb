@@ -1,4 +1,3 @@
-require "pry-byebug"
 require "open-uri"
 Animal.destroy_all
 User.destroy_all
