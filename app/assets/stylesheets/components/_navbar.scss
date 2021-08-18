@@ -1,6 +1,5 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #C4C4C4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,6 +13,14 @@
 
 .nav-link {
   color: #5D5FEF !important;
-  font-weight: bolder;
+  font-weight: lighter;
   font-size: 1.2rem;
+}
+
+.z-index {
+  z-index: 3;
+}
+
+.dropdown-toggle {
+  opacity: 50%;
 }

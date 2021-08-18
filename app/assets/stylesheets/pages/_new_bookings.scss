@@ -1,0 +1,35 @@
+$iris: #5D5FEF;
+$berbel: #7879F1;
+$fuscia: #FCDDEC;
+$dark: rgb(73, 73, 73);
+$border: 2px solid $berbel;
+
+
+#booking-container{
+  display: flex;
+  color: $dark;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.booking-img {
+  padding-left: 30px;
+}
+
+.booking-details {
+  border: $border;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.date-booking {
+  border: $border;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 20px;
+  padding-bottom: 5px;
+}
+
+.container {
+  padding-top: 40px;
+}
