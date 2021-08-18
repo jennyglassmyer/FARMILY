@@ -1,4 +1,5 @@
 require "open-uri"
+Booking.destroy_all
 Animal.destroy_all
 User.destroy_all
 
