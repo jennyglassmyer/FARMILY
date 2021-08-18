@@ -1,5 +1,5 @@
 <div class="show-header">
-  <h1 class="show-header-h1"> <%= link_to"〈", root_path %> Meet <%= @animal.name %></h1>
+  <h1 class="show-header-h1"> <%= link_to"〈", root_path, class: "arrow" %> Meet <%= @animal.name %></h1>
 </div>
 
 
@@ -28,7 +28,7 @@
     <p>Price per day: <%= @animal.price_per_day %>€</p>
     <p>Care instructions: <%= @animal.care_instructions %></p>
 
-    <%= link_to "Book this Animal", new_animal_booking_path(@animal) %>
+    <%= link_to "Book this Animal", new_animal_booking_path(@animal), class: "button" %>
   </div>
 
 </div>

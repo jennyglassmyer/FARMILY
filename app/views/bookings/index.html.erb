@@ -1,6 +1,6 @@
 <h1>Your Bookings</h1>
 <ul>
 <% @bookings.each do |booking| %>
-  <li> <%= link_to booking.animal.name, animal_booking_path(booking.animal, booking) %> Start Date: <%= booking.date_start %> <%= link_to 'Cancel Booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <li> <%= link_to booking.animal.name, animal_booking_path(booking.animal, booking), class: "button" %> Start Date: <%= booking.date_start %> <%= link_to 'Cancel Booking', booking_path(booking), class: "button", method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %>
 </ul>
