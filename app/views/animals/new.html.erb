@@ -1,16 +1,22 @@
-<h1>Create New Animal Profile</h1>
+<div class="container">
+  <h1 class="new-header"> <%= link_to"〈", root_path %> Add your lovely animal</h1>
+</div>
 
-<%= simple_form_for [@animal] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :species, :collection => %w[Horse Cow Pig Dog Chicken Cat Goat Sheep Duck Goose] %>
-  <%= f.input :breed %>
-  <%= f.input :gender, :collection => %w[Male Female] %>
-  <%= f.input :personality %>
-  <%= f.input :description %>
-  <%= f.input :care_level, :collection => %w[Easy Medium Hard] %>
-  <%= f.input :age %>
-  <%= f.input :price_per_day %>
-  <%= f.input :care_instructions %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+<div class="container" id="new-form">
+    <%= simple_form_for [@animal] do |f| %>
+  <div class="form-categories">
+      <%= f.input :name %>
+      <%= f.input :species, :collection => %w[Horse Cow Pig Dog Chicken Cat Goat Sheep Duck Goose] %>
+      <%= f.input :breed %>
+      <%= f.input :gender, :collection => %w[Male Female] %>
+      <%= f.input :personality %>
+      <%= f.input :description %>
+      <%= f.input :care_level, :collection => %w[Easy Medium Hard] %>
+      <%= f.input :age %>
+      <%= f.input :price_per_day %>
+      <%= f.input :care_instructions %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
