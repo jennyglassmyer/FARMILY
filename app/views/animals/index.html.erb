@@ -1,10 +1,10 @@
 
 <div class="header-container">
   <div class="banner">
-    <%= image_tag 'goat.jpg', class: 'img-banner' %>
+    <%= image_tag 'jumbotron.jpeg', class: 'img-banner' %>
   </div>
   <div class="header-text">
-    <h1 class="header-h1">Did you ever take a goat on a stroll through Görlitzer Park?</h1>
+    <h1 class="header-h1">Did you ever take a sheep on a stroll through Görlitzer Park?</h1>
     <h4 class="header-h4">Rent a farm animal and create a unqiue, cuddly experience</h4>
   </div>
 </div>
@@ -16,6 +16,5 @@
       <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
       <% end %>
       </ul>
-  </div>
+</div>
 
-      <%# <%= link_to "Add New Animal", new_animal_path %>
