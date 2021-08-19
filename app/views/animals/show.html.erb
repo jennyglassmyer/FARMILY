@@ -1,21 +1,34 @@
-<h1> <%= link_to"〈", root_path %> Meet <%= @animal.name %></h1>
+<div class="show-header">
+  <h1 class="show-header-h1"> <%= link_to"〈", root_path, class: "arrow" %> Meet <%= @animal.name %></h1>
+</div>
 
-  <% @animal.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
- <% end %>
-  <p>Owner: <%= @animal.user.first_name %> <%= @animal.user.last_name %></p>
- <p>Name: <%= @animal.name %></p>
- <p>Species: <%= @animal.species %></p>
- <% if @animal.breed == "" %>
- <% else %>
-   <p>Breed: <%= @animal.breed %></p>
- <% end %>
- <p>Gender: <%= @animal.gender %></p>
- <p>Personality: <%= @animal.personality %></p>
- <p>Description: <%= @animal.description %></p>
- <p>Care level: <%= @animal.care_level %></p>
- <p>Age: <%= @animal.age %></p>
- <p>Price per day: <%= @animal.price_per_day %>€</p>
- <p>Care instructions: <%= @animal.care_instructions %></p>
 
-  <%= link_to "Book this Animal", new_animal_booking_path(@animal) %>
+<div class="container" id="show-container">
+  <div class="show-img">
+    <% @animal.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 350, width: 500, crop: :fill, radius: 10; %>
+    <% end %>
+  </div>
+
+  <div class="show-profile">
+    <p>Owner: <%= @animal.user.first_name %> <%= @animal.user.last_name %></p>
+    <p>Name: <%= @animal.name %></p>
+    <p>Species: <%= @animal.species %></p>
+
+    <% if @animal.breed == "" %>
+    <% else %>
+      <p>Breed: <%= @animal.breed %></p>
+    <% end %>
+
+    <p>Gender: <%= @animal.gender %></p>
+    <p>Personality: <%= @animal.personality %></p>
+    <p>Description: <%= @animal.description %></p>
+    <p>Care level: <%= @animal.care_level %></p>
+    <p>Age: <%= @animal.age %></p>
+    <p>Price per day: <%= @animal.price_per_day %>€</p>
+    <p>Care instructions: <%= @animal.care_instructions %></p>
+
+    <%= link_to "Book this Animal", new_animal_booking_path(@animal), class: "button" %>
+  </div>
+
+</div>
