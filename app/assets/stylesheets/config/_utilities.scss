@@ -1,17 +1,25 @@
+a {
+  color:white;
+}
+
 a:hover {
   color: $fuscia;
   text-decoration: none;
 }
 
+.arrow {
+  color: $grey;
+}
+
+.banner{
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
 body {
   background-color: white;
 }
-
-// h1 {
-//   color: $dark;
-//   font-weight: bold;
-//   font-size: 40px;
-// }
 
 .button {
   background-color: $iris;
@@ -19,8 +27,42 @@ body {
   padding: 10px 30px 10px 30px;
   border-radius: 10px;
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 
-.arrow {
-  color: $grey;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.cards {
+  flex-grow: 1;
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 30rem;
+  border-radius: 10px;
+  margin: 15px 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+
+.img-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

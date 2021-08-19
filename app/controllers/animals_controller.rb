@@ -3,7 +3,14 @@ class AnimalsController < ApplicationController
   # before_action :set_animal, only: [:show]
 
   def index
-    @animals = Animal.all
+    if params[:query].present?
+      @animals = Animal.search_by_species_and_name(params[:query])
+      @show_button = true
+    else
+      @animals = Animal.all
+      @show_button = false
+      @previous_search = ''
+    end
   end
 
   def show
