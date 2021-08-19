@@ -24,10 +24,9 @@ class BookingsController < ApplicationController
       animal: @animal,
       user: @user
     )
-    
     @total_price = calculate_total(@booking.date_start, @booking.date_end, @booking.animal.price_per_day)
     @booking.total_price = @total_price
-
+    @booking.pending!
     if @booking.save
       redirect_to animal_booking_path(@animal, @booking)
     else
@@ -38,6 +37,18 @@ class BookingsController < ApplicationController
   def destroy
     @booking.destroy
     redirect_to animal_bookings_path(@booking.animal), notice: 'Booking was canceled.'
+  end
+
+  def accept
+    @booking = Booking.find(params[:animal_id])
+    @booking.accepted!
+    redirect_to dashboard_index_path, notice: 'Booking confirmed!'
+  end
+
+  def decline
+    @booking = Booking.find(params[:animal_id])
+    @booking.declined!
+    redirect_to dashboard_index_path, notice: 'Booking declined!'
   end
 
   private

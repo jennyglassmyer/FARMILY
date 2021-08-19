@@ -1,0 +1,14 @@
+<div class="show-header">
+  <h1 class="show-header-h1"> <%= link_to"〈", dashboard_index_path, class: "arrow" %> Bookings for <%= @animal.name %></h1>
+</div>
+
+<ul>
+<% @animal.bookings.each do |booking| %>
+  <li> Start Date: <%= booking.date_start %> | End Date: <%= booking.date_end %> | Requestor: <%= booking.user.first_name %> <%= booking.user.last_name %>
+  <% if booking.pending? %>
+  <%= link_to "Accept Booking", accept_path(booking), class: "button", method: :patch, controller: :bookings_controller %>
+  <%= link_to "Decline Booking", decline_path(booking), class: "button", method: :patch, controller: :bookings_controller, data: { confirm: 'Are you sure you want to decline this booking?' } %>
+  <% end %>
+  </li>
+<% end %>
+</ul>
