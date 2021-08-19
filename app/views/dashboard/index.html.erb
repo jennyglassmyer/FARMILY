@@ -1,29 +1,42 @@
-<h1>Your Dashboard</h1>
+<div class="container">
+  <h1>Your Dashboard</h1>
 
-<div class="container d-flex">
-  <div>
-  <h2>Your Bookings</h2>
-  <% @requests.each do |request| %>
-  <div class="card" style="background-image: url(<%= cl_image_path request.animal.photos.first.key %>)">
-      <%= link_to request.animal.name, animal_path(request.animal) %> 
-      <ul>
-        <li>Start Date: <%= request.date_start %></li>
-        <li>End Date: <%= request.date_end %></li>
-        <li>Status: <%= request.status %></li>
-      </ul>
+  <div class="d-flex justify-content-between">
+    <div>
+      <h2>Your Bookings</h2>
+      <% if @requests.count.positive? %>
+        <% @requests.each do |request| %>
+          <div class="card" style="background-image: url(<%= cl_image_path request.animal.photos.first.key %>)">
+            <%= link_to request.animal.name, animal_path(request.animal) %> 
+            <ul>
+              <li>Start Date: <%= request.date_start %></li>
+              <li>End Date: <%= request.date_end %></li>
+              <li>Status: <%= request.status %></li>
+            </ul>
+          </div>
+        <% end  %>
+      <% else %>
+        <p>You haven't booked any farm animals yet! 😢 </p>
+        <%= link_to "Search for Farm Animals", root_path, class: "button" %>
+      <% end %>
     </div>
-  <% end  %>
-  </div>
+  
 
-  <div>
-  <h2>Your Farm Animals for Rent</h2>
-    <% @animals.each do |animal| %>
-      <div class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)">
-        <%= link_to animal.name, animal_path(animal) %> 
-        <div class="notification">
-          <%= link_to animal.bookings.where(status: "pending").count, dashboard_path(animal) %>
-        </div>
-      </div>
-    <% end %>
-  </div> 
+    <div>
+      <h2>Your Farm Animals for Rent</h2>
+      <% if @animals.count.positive? %>
+        <% @animals.each do |animal| %>
+          <div class="card position-relative" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)">
+            <%= link_to animal.name, animal_path(animal) %> 
+            <span class="position-absolute top-0 left-99 translate-middle badge rounded-pill bg-light">
+              <%= link_to animal.bookings.where(status: "pending").count, dashboard_path(animal) %>
+            </span>  
+          </div>
+        <% end %>
+      <% else %>
+        <p>You have not listed any farm animals for rent.</p>
+        <%= link_to "Rent Your Farm Animal", new_animal_path, class: "button" %>
+      <% end %>
+    </div> 
+  </div>
 </div>
