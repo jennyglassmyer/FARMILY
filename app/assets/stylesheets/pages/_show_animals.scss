@@ -1,5 +1,6 @@
 .show-header {
-  padding-top: 90px;
+  padding-top: 50px;
+  padding-left: 35px;
 }
 
 .show-header-h1 {
@@ -9,10 +10,19 @@
 }
 
 #show-container {
-  margin: 0 0;
+  margin: auto;
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 40px;
+}
+
+.map-box {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 .show-profile {
@@ -21,6 +31,7 @@
 }
 
 .show-img {
+  // object-fit: contain;
   padding-left: 0;
   border-radius: 10px;
 }

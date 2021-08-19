@@ -1,0 +1,51 @@
+$iris: #5D5FEF;
+$berbel: #7879F1;
+$fuscia: #FCDDEC;
+$dark: rgb(73, 73, 73);
+
+.box-login {
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+
+.login-header {
+  color: $dark;
+  font-family: Roboto;
+  margin: 0 auto;
+
+}
+
+#login-form {
+  padding-top: 50px;
+  border: 2px solid $iris;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.simple_form.new_user {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.login-categories {
+  color: $dark;
+  font-weight: bolder;
+  font-family: Roboto;
+  margin-bottom: 20px;
+}
+
+// .form-control {
+//   border-radius: 8px;
+//   background-color: #E5E5E5;
+// }
+
+// .form-control-file {
+//   display: inline-block;
+// }

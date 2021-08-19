@@ -1,7 +1,8 @@
 .header-container {
   position: relative;
   text-align: center;
-  color: $berbel;
+  // color: $berbel;
+  color: $darkgrey;
 }
 
 .container {
@@ -48,7 +49,7 @@
 .card {
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 300px;
   width: 30rem;
   border-radius: 10px;
   margin: 15px 10px;
