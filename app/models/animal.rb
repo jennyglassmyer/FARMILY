@@ -13,13 +13,14 @@ class Animal < ApplicationRecord
   validates :price_per_day, presence: true
   validates :care_instructions, presence: true
 
+  CARE_LEVEL = ["Easy", "Medium", "Hard"]
+
   include PgSearch::Model
   pg_search_scope :search_by_species_and_name,
     against: [ :species, :name ],
     using: {
       tsearch: { prefix: true }
     }
-  # multisearchable against: [:species, :name]
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 end
