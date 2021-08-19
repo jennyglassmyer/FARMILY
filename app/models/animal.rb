@@ -12,4 +12,6 @@ class Animal < ApplicationRecord
   validates :age, presence: true
   validates :price_per_day, presence: true
   validates :care_instructions, presence: true
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
