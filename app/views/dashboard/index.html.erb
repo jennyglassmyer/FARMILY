@@ -1,0 +1,7 @@
+<h1>Your Farm Animals</h1>
+
+<ul>
+  <% @animals.each do |animal| %>
+    <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
+  <% end %>
+</ul>

@@ -7,10 +7,7 @@ user_1 = User.create(
   first_name: "Marie",
   last_name: "Hasselberg",
   email: "marie@marie.com",
-  street: "Mitte",
-  house_number: 12,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Mitte 56 Berlin, Berlin, Germany",
   password: "123456"
 )
 
@@ -18,10 +15,7 @@ user_2 = User.create(
   first_name: "Philip",
   last_name: "Nordy",
   email: "nordy@nordy.com",
-  street: "Moabit",
-  house_number: 24,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Moabit 24 Berlin, Berlin, Germany",
   password: "123456"
 )
 
@@ -29,10 +23,7 @@ user_3 = User.create(
   first_name: "Otmar",
   last_name: "Jenner",
   email: "otmar@otmar.com",
-  street: "Mitte",
-  house_number: 56,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Mitte 89 Berlin, Berlin, Germany",
   password: "123456"
 )
 
@@ -40,10 +31,7 @@ user_4 = User.create(
   first_name: "Jenny",
   last_name: "Glassmyer",
   email: "jennifer@gmail.com",
-  street: "Mitte",
-  house_number: 12,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Frankfurter Allee 12, Berlin, Berlin, Germany",
   password: "123456"
 )
 
@@ -58,7 +46,8 @@ animal1 = Animal.create(
   age: 5,
   price_per_day: 150,
   care_instructions: "Need fresh hey every day, 10 litres of water, no alcohol, please, had a former addiction.",
-  user_id: user_1.id
+  user_id: user_1.id,
+  address: user_1.address
   )
 
   file = URI.open('https://images.unsplash.com/photo-1622037088021-26eb84ef2389?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
@@ -76,7 +65,8 @@ animal1 = Animal.create(
     age: 7,
     price_per_day: 80,
     care_instructions: "Needs 10 Kilos of food per day, loves fried vegetables and a lot of hugging. No sweets please.",
-    user_id: user_1.id
+    user_id: user_2.id,
+    address: user_2.address
   )
 
   file = URI.open('https://images.unsplash.com/photo-1627930738037-9127714a9434?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
@@ -96,7 +86,8 @@ animal1 = Animal.create(
   age: 3,
   price_per_day: 80,
   care_instructions: "Feed twice daily and lots of pets.",
-  user_id: user_3.id
+  user_id: user_3.id,
+  address: user_3.address
   )
 
   file = URI.open('https://images.unsplash.com/photo-1501820488136-72669149e0d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
@@ -115,7 +106,8 @@ animal1 = Animal.create(
   age: 3,
   price_per_day: 50,
   care_instructions: "Needs a large pasture and plenty of grass.",
-  user_id: user_4.id
+  user_id: user_4.id,
+  address: user_4.address
   )
 
   file = URI.open('https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=842&q=80')

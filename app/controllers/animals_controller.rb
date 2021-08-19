@@ -1,6 +1,6 @@
 class AnimalsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_animal, only: [:show]
+  # before_action :set_animal, only: [:show]
 
   def index
     # @animals = Animal.all
@@ -13,6 +13,8 @@ class AnimalsController < ApplicationController
   end
 
   def show
+    @animal = Animal.geocoded.find(params[:id])
+    @markers = [{ lat: @animal.latitude, lng: @animal.longitude }]
   end
 
   def new
