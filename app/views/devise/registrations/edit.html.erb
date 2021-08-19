@@ -28,22 +28,11 @@
                 hint: "we need your current password to confirm your changes",
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :street,
+    <%= f.input :address,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "address-line1" } %>
-    <%= f.input :house_number,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "" } %>
-    <%= f.input :post_code,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "postal-code" } %>
-    <%= f.input :city,
-                hint: "leave it blank if you don't want to change it",
-                required: false,
-                input_html: { autocomplete: "address-level2" } %>
+                input_html: { id: "address_input" } %>
+
   </div>
 
   <div class="form-actions">
