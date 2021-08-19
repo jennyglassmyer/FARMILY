@@ -32,6 +32,14 @@
 </div>
 
 <h5 class="home-h3">These farm animals are cute and available</h5>
+<% if @show_button %>
+<%= form_tag animals_path, method: :get do %>
+      <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL))  %>
+      <%= hidden_field_tag :query, params[:query] %>
+      <%= submit_tag "Select", class: "btn btn-link" %>
+    <% end %>
+<% end %>
+
 <div class="container">
       <ul class = cards>
       <% @animals.each do |animal| %>
