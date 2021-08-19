@@ -1,7 +1,30 @@
-<h1>Your Farm Animals</h1>
+<h1>Your Dashboard</h1>
 
-<ul>
-  <% @animals.each do |animal| %>
-    <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
-  <% end %>
-</ul>
+<div class="container d-flex">
+  <div>
+  <h2>Your Bookings</h2>
+  <% @requests.each do |request| %>
+  <div class="card" style="background-image: url(<%= cl_image_path request.animal.photos.first.key %>)">
+      <%= link_to request.animal.name, animal_path(request.animal) %> 
+      <ul>
+        <li>Start Date: <%= request.date_start %></li>
+        <li>End Date: <%= request.date_end %></li>
+        <li>Status: <%= request.status %></li>
+      </ul>
+    </div>
+  <% end  %>
+  </div>
+
+  <div>
+  <h2>Your Farm Animals for Rent</h2>
+    <% @animals.each do |animal| %>
+      <div class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)">
+        <%= link_to animal.name, animal_path(animal) %> 
+        <div class="notification">
+          <%= link_to animal.bookings.where(status: "pending").count, dashboard_path(animal) %>
+        </div>
+      </div>
+    <% end %>
+  </div> 
+</div>
+
