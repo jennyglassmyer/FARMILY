@@ -1,10 +1,10 @@
 <div class="container">
-  <h1 class="new-header-edit"> <%= link_to"〈", root_path, class: "arrow" %> Add your lovely animal</h1>
+  <h1 class="new-header"> <%= link_to"〈", root_path, class: "arrow" %> Add your lovely animal</h1>
 </div>
 
-<div class="container" id="new-form-edit">
+<div class="container" id="new-form">
     <%= simple_form_for [@animal] do |f| %>
-  <div class="form-categories-edit">
+  <div class="form-categories">
       <%= f.input :name %>
       <%= f.input :species, :collection => %w[Horse Cow Pig Dog Chicken Cat Goat Sheep Duck Goose] %>
       <%= f.input :breed %>
