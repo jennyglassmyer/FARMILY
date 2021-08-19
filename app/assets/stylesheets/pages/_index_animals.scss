@@ -1,7 +1,8 @@
 .header-container {
   position: relative;
   text-align: center;
-  color: $berbel;
+  // color: $berbel;
+  color: $darkgrey;
 }
 
 .header-h1{
@@ -31,6 +32,22 @@
   color: $dark;
   padding-top: 20px;
 }
+
+.cards {
+  flex-grow: 1;
+  display: grid;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 30rem;
+  border-radius: 10px;
+  margin: 15px 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
 
 .search-bar {
   display: flex;

@@ -2,12 +2,20 @@
   <h1 class="show-header-h1"> <%= link_to"〈", root_path, class: "arrow" %> Meet <%= @animal.name %></h1>
 </div>
 
-
 <div class="container" id="show-container">
+
+
   <div class="show-img">
     <% @animal.photos.each do |photo| %>
       <%= cl_image_tag photo.key, height: 350, width: 500, crop: :fill, radius: 10; %>
     <% end %>
+    <div class="map-box">
+      <div id="map"
+        style="width: 100%; height: 300px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
 
   <div class="show-profile">
@@ -31,9 +39,3 @@
     <%= link_to "Book this Animal", new_animal_booking_path(@animal), class: "button" %>
   </div>
 </div>
-
-  <div class="container" id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
