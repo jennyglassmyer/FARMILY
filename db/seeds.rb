@@ -7,10 +7,7 @@ user_1 = User.create(
   first_name: "Marie",
   last_name: "Hasselberg",
   email: "marie@marie.com",
-  street: "Mitte",
-  house_number: 12,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Mitte 56 Berlin, Berlin, Germany"
   password: "123456"
 )
 
@@ -18,10 +15,7 @@ user_2 = User.create(
   first_name: "Philip",
   last_name: "Nordy",
   email: "nordy@nordy.com",
-  street: "Moabit",
-  house_number: 24,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Moabit 24 Berlin, Berlin, Germany"
   password: "123456"
 )
 
@@ -29,10 +23,7 @@ user_3 = User.create(
   first_name: "Otmar",
   last_name: "Jenner",
   email: "otmar@otmar.com",
-  street: "Mitte",
-  house_number: 56,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Mitte 89 Berlin, Berlin, Germany"
   password: "123456"
 )
 
@@ -40,10 +31,7 @@ user_4 = User.create(
   first_name: "Jenny",
   last_name: "Glassmyer",
   email: "jennifer@gmail.com",
-  street: "Mitte",
-  house_number: 12,
-  city: "Berlin",
-  post_code: 10000,
+  address: "Frankfurter Allee 12, Berlin, Berlin, Germany"
   password: "123456"
 )
 
