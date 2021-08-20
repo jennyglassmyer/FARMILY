@@ -15,37 +15,36 @@
         class: "form-control",
         placeholder: "Type of Farm Animal"
       %>
-      <%= submit_tag "Search Farm Animals", class: "search-button" %>
+      <%= submit_tag "Search", class: "search-button" %>
     </div>
     <% end %>
-    
-    <div class="row justify-content-center">
-      <div class="col-sm-8">
-      </div>
-    </div>
-
   </div>
 </div>
 
-
 <% if @show_button %>
-  <%= form_tag animals_path, method: :get do %>
-    <%= label_tag "Difficulty Level"  %>
-    <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL, params[:search]))  %>
-    <%= hidden_field_tag :query, params[:query] %>
-    <%= submit_tag "Filter", class: "button" %>
-  <% end %>
+    <%= form_tag animals_path, method: :get do %>
+    <div class="container filter">
+      <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL, params[:search])) %>
+      <%= hidden_field_tag :query, params[:query] %>
+      <%= submit_tag "Filter by Difficulty", class: "filter-btn" %>
+    <% end %>
+  </div>
 <% end %>
 
-<div class="container">
-      <ul class = cards>
-      <% if @animals.count.positive? %>
-        <h5 class="home-h3">These farm animals are cute and available</h5>
-        <% @animals.each do |animal| %>
+<% if @animals.count.positive? %>
+  <h5 class="home-h3">These farm animals are cute and available</h5>
+  <div class="container">
+    <ul class = cards>
+      <% @animals.each do |animal| %>
         <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
-        <% end %>
-      </ul>
-      <% else %>
-        <h5>No farm animals match your search criteria. There are lots of animals that would like to go on an adventure. Please search again!</h5>
       <% end %>
-</div>
+    </ul>
+  </div>
+<% else %>
+  <div class="results-container">
+    <h5>No farm animals match your search criteria.</h5> 
+    <h5>There are lots of animals that would like to go on an adventure.</h5> 
+    <h5>Please change your search criteria and try again!</h5>
+  </div>
+<% end %>
+
