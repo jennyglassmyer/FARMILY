@@ -16,11 +16,12 @@ class Animal < ApplicationRecord
   CARE_LEVEL = ["Easy", "Medium", "Hard"]
 
   include PgSearch::Model
-  pg_search_scope :search_by_species_and_name,
-    against: [ :species, :name ],
+  pg_search_scope :search_by_species,
+    against: [ :species ],
     using: {
       tsearch: { prefix: true }
     }
+
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 end

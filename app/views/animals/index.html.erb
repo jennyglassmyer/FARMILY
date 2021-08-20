@@ -4,7 +4,7 @@
   </div>
   <div class="header-text">
     <h1 class="header-h1">Did you ever take a sheep on a stroll through Görlitzer Park?</h1>
-    <h4 class="header-h4">Rent a farm animal and create a unique, cuddly experience</h4>
+    <h4 class="header-h4">Rent a farm animal and have a unique, cuddly experience</h4>
   </div>
 
   <div>
@@ -13,37 +13,39 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Search a farm animal"
+        placeholder: "Type of Farm Animal"
       %>
-      <%= submit_tag "Go", class: "search-button" %>
+      <%= submit_tag "Search Farm Animals", class: "search-button" %>
     </div>
     <% end %>
+    
     <div class="row justify-content-center">
       <div class="col-sm-8">
-        <div id="animals">
-          <% @animals.each do |animal| %>
-            <% if animal.class == Animal %>
-            <% end %>
-          <% end %>
-        </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<h5 class="home-h3">These farm animals are cute and available</h5>
+
 <% if @show_button %>
-<%= form_tag animals_path, method: :get do %>
-      <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL))  %>
-      <%= hidden_field_tag :query, params[:query] %>
-      <%= submit_tag "Select", class: "btn btn-link" %>
-    <% end %>
+  <%= form_tag animals_path, method: :get do %>
+    <%= label_tag "Difficulty Level"  %>
+    <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL, params[:search]))  %>
+    <%= hidden_field_tag :query, params[:query] %>
+    <%= submit_tag "Filter", class: "button" %>
+  <% end %>
 <% end %>
 
 <div class="container">
       <ul class = cards>
-      <% @animals.each do |animal| %>
-      <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
-      <% end %>
+      <% if @animals.count.positive? %>
+        <h5 class="home-h3">These farm animals are cute and available</h5>
+        <% @animals.each do |animal| %>
+        <li class="card" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)"><%= link_to animal.name, animal_path(animal) %></li>
+        <% end %>
       </ul>
+      <% else %>
+        <h5>No farm animals match your search criteria. There are lots of animals that would like to go on an adventure. Please search again!</h5>
+      <% end %>
 </div>
