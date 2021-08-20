@@ -21,8 +21,8 @@
   <div class="show-profile">
     <p><%= image_tag 'user-circle-solid.svg', class: "avatar dropdown-toggle" %> <%= @animal.user.first_name %> <%= @animal.user.last_name %></p>
     <p><strong>Price per day</strong> <%= @animal.price_per_day %>€</p>
-    <p><strong>Gender</strong> 
-      <% if @animal.gender == "Male" %> 
+    <p><strong>Gender</strong>
+      <% if @animal.gender == "Male" %>
         <i class="fas fa-mars gender"></i>
       <% else %>
         <i class="fas fa-venus gender"></i>
@@ -31,7 +31,7 @@
     <% if @animal.breed == "" %>
     <% else %>
       <strong>Breed</strong> <%= @animal.breed %>
-    <% end %>   
+    <% end %>
     </p>
     <p><strong>Care level</strong> <%= @animal.care_level %></p>
     <p><strong>Personality</strong> <%= @animal.personality %></p>
@@ -40,7 +40,7 @@
 
   <h4 class="create-booking">Book <%= @animal.name %> For An Adventure</h4>
 
-    <div class="date-booking">
+    <div class="animal-show-date-booking">
       <%= simple_form_for [@animal, @booking] do |f| %>
       <%= f.input :date_start, label: "Date of Pickup" %>
       <%= f.input :date_end, label: "Date of Drop Off" %>
