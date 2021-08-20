@@ -20,7 +20,6 @@
 
   <div class="show-profile">
     <p>Owner: <%= @animal.user.first_name %> <%= @animal.user.last_name %></p>
-    <p>Name: <%= @animal.name %></p>
     <p>Species: <%= @animal.species %></p>
 
     <% if @animal.breed == "" %>
@@ -36,6 +35,15 @@
     <p>Price per day: <%= @animal.price_per_day %>€</p>
     <p>Care instructions: <%= @animal.care_instructions %></p>
 
-    <%= link_to "Book this Animal", new_animal_booking_path(@animal), class: "button" %>
+  <h2>Create Booking for <%= @animal.name %></h2>
+
+    <div class="date-booking">
+      <%= simple_form_for [@animal, @booking] do |f| %>
+      <%= f.input :date_start, label: "Date of Pickup" %>
+      <%= f.input :date_end, label: "Date of Drop Off" %>
+      <%= f.submit :class => "button" %>
+      <% end %>
+    </div>
+
   </div>
 </div>
