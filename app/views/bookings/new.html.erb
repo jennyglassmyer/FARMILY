@@ -16,7 +16,7 @@
   </div>
   <div class="booking-img">
     <% @animal.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 350, width: 500, crop: :fill, radius: 10; %>
+      <%= cl_image_tag photo.key, height: 350, width: 500, crop: :fill, radius: 15; %>
     <% end %>
   </div>
 </div>

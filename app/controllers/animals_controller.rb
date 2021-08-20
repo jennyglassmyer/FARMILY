@@ -4,13 +4,15 @@ class AnimalsController < ApplicationController
 
   def index
     if params[:query].present?
-      @animals = Animal.search_by_species_and_name(params[:query])
-      @show_filter = true
+      @animals = Animal.search_by_species(params[:query])
+      if params[:search].present?
+        @animals = @animals.where(care_level: params[:search])
+      end
     else
       @animals = Animal.all
-      @show_filter = false
       @previous_search = ''
     end
+
   end
 
   def show
