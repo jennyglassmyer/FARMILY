@@ -481,3 +481,137 @@ animal20 = Animal.create(
   file = URI.open('https://images.unsplash.com/photo-1604632797782-aeea068823f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80')
 
   animal20.photos.attach(io: file, filename: 'dog.jpg', content_type: 'image/jpg')
+
+
+booking1 = Booking.create(
+  user_id: user_1.id,
+  animal_id: animal1.id,
+  date_start: Date.new(2021,8,21),
+  date_end: Date.new(2021,8,27)
+)
+
+booking2 = Booking.create(
+  user_id: user_1.id,
+  animal_id: animal2.id,
+  date_start: Date.new(2021,8,28),
+  date_end: Date.new(2021,8,29)
+)
+
+booking3 = Booking.create(
+  user_id: user_2.id,
+  animal_id: animal3.id,
+  date_start: Date.new(2021,8,22),
+  date_end: Date.new(2021,9,3)
+)
+
+booking4 = Booking.create(
+  user_id: user_3.id,
+  animal_id: animal4.id,
+  date_start: Date.new(2021,8,23),
+  date_end: Date.new(2021,9,5)
+)
+
+booking5 = Booking.create(
+  user_id: user_3.id,
+  animal_id: animal5.id,
+  date_start: Date.new(2021,9,6),
+  date_end: Date.new(2021,9,7)
+)
+
+booking6 = Booking.create(
+  user_id: user_4.id,
+  animal_id: animal6.id,
+  date_start: Date.new(2021,9,8),
+  date_end: Date.new(2021,9,10)
+)
+
+booking7 = Booking.create(
+  user_id: user_5.id,
+  animal_id: animal7.id,
+  date_start: Date.new(2021,8,22),
+  date_end: Date.new(2021,9,9)
+)
+
+booking8 = Booking.create(
+  user_id: user_5.id,
+  animal_id: animal8.id,
+  date_start: Date.new(2021,9,22),
+  date_end: Date.new(2021,9,24)
+)
+
+booking9 = Booking.create(
+  user_id: user_5.id,
+  animal_id: animal9.id,
+  date_start: Date.new(2021,9,25),
+  date_end: Date.new(2021,9,28)
+)
+
+booking10 = Booking.create(
+  user_id: user_6.id,
+  animal_id: animal10.id,
+  date_start: Date.new(2021,9,23),
+  date_end: Date.new(2021,9,28)
+)
+
+booking11 = Booking.create(
+  user_id: user_6.id,
+  animal_id: animal11.id,
+  date_start: Date.new(2021,9,29),
+  date_end: Date.new(2021,10,1)
+)
+
+booking12 = Booking.create(
+  user_id: user_7.id,
+  animal_id: animal12.id,
+  date_start: Date.new(2021,9,29),
+  date_end: Date.new(2021,10,1)
+)
+
+booking13 = Booking.create(
+  user_id: user_8.id,
+  animal_id: animal13.id,
+  date_start: Date.new(2021,8,29),
+  date_end: Date.new(2021,10,1)
+)
+
+booking14 = Booking.create(
+  user_id: user_8.id,
+  animal_id: animal14.id,
+  date_start: Date.new(2021,8,29),
+  date_end: Date.new(2021,10,1)
+)
+
+booking15 = Booking.create(
+  user_id: user_8.id,
+  animal_id: animal15.id,
+  date_start: Date.new(2021,8,23),
+  date_end: Date.new(2021,9,1)
+)
+
+booking16 = Booking.create(
+  user_id: user_9.id,
+  animal_id: animal16.id,
+  date_start: Date.new(2021,8,22),
+  date_end: Date.new(2021,9,5)
+)
+
+booking17 = Booking.create(
+  user_id: user_9.id,
+  animal_id: animal18.id,
+  date_start: Date.new(2021,9,6),
+  date_end: Date.new(2021,9,19)
+)
+
+booking18 = Booking.create(
+  user_id: user_10.id,
+  animal_id: animal19.id,
+  date_start: Date.new(2021,8,25),
+  date_end: Date.new(2021,9,2)
+)
+
+booking19 = Booking.create(
+  user_id: user_10.id,
+  animal_id: animal20.id,
+  date_start: Date.new(2021,8,23),
+  date_end: Date.new(2021,9,20)
+)
