@@ -1,5 +1,5 @@
 <div class="show-header">
-  <h1 class="show-header-h1"> <%= link_to"〈", dashboard_index_path, class: "arrow" %> Booking requests for <%= @animal.name %></h1>
+  <h1 class="show-header-h1"> <%= link_to"〈", dashboard_index_path, class: "arrow" %> Booking Requests for <%= @animal.name %></h1>
 </div>
 
 <div class ="dash-request">
@@ -12,10 +12,10 @@
             <%= link_to booking.animal.name, animal_path(booking.animal) %>
           </div>
             <ul class="request-list">
-              <li><strong>Booking details</strong></li>
+              <li><strong>Booking Details</strong></li>
               <li><strong>Start Date</strong> <%= booking.date_start %></li>
               <li><strong>End Date</strong> <%= booking.date_end %></li>
-              <li><strong>Requestor</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></li>
+              <li><strong>Requester</strong> <%= booking.user.first_name %> <%= booking.user.last_name %></li>
               <li><strong>Status</strong> <%= booking.status.capitalize %></li>
             </ul>
           </div>
