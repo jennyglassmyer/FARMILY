@@ -9,12 +9,7 @@ class BookingsController < ApplicationController
   def show
     @animal = Animal.find(params[:animal_id])
   end
-
-  def new
-    @booking = Booking.new
-    @animal = Animal.find(params[:animal_id])
-  end
-
+  
   def create
     @animal = Animal.find(params[:animal_id])
     @user = current_user
@@ -30,7 +25,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to animal_booking_path(@animal, @booking)
     else
-      render :new
+      render "animals/show"
     end
   end
 
