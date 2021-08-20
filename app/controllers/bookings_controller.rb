@@ -2,6 +2,7 @@ require 'date'
 
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy]
+  
   def index
     @bookings = Booking.where("user = current_user")
   end

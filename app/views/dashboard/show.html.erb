@@ -8,9 +8,9 @@
       <li>
         <div class="request-card">
           <div class="request-details">
-          <div class="request-img" style="background-image: url(<%= cl_image_path booking.animal.photos.first.key %>)">
-            <%= link_to booking.animal.name, animal_path(booking.animal) %>
-          </div>
+            <div class="request-img" style="background-image: url(<%= cl_image_path booking.animal.photos.first.key %>)">
+              <%= link_to booking.animal.name, animal_path(booking.animal) %>
+            </div>
             <ul class="request-list">
               <li><strong>Booking Details</strong></li>
               <li><strong>Start Date</strong> <%= booking.date_start %></li>
@@ -22,12 +22,11 @@
           <div class="request-buttons">
               <% if booking.pending? %>
                 <%= link_to "Accept", accept_path(booking), class: "button", method: :patch, controller: :bookings_controller %>
-
                 <%= link_to "Decline", decline_path(booking), class: "button", method: :patch, controller: :bookings_controller, data: { confirm: 'Are you sure you want to decline this booking?' } %>
               <% end %>
-              </li>
-            <% end %>
           </div>
         </div>
+      </li>
+    <% end %>
   </ul>
 </div>
