@@ -6,7 +6,7 @@
     </div>
     <div class="header-text">
       <h1 class="bookings-header-h1">Yay! You and <%= @animal.name %> are going on an adventure together!</h1>
-      <h5 class="bookings-header-h5">Your booking has been successful. Now put down the dates in your calendar. <%= @animal.name %> does not like to wait for humans.</h5>
+      
 
       <ul class="list-styling">
         <li>Start Date: <%= @booking.date_start %></li>
@@ -16,7 +16,7 @@
         <li>Owner Name: <%= @animal.user.first_name %> <%= @animal.user.last_name %></li>
       </ul>
 
-  <%= link_to "Book more fun experiences with animals", root_path, class: "button", id: "btn-back" %>
+  <%= link_to "Book more farm animals and impress more humans", root_path, class: "button", id: "btn-back" %>
     </div>
   </div>
 
