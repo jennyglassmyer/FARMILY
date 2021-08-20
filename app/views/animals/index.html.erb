@@ -13,7 +13,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Type of Farm Animal"
+        placeholder: "What type of farm animal are you looking for?"
       %>
       <%= submit_tag "Search", class: "search-button" %>
     </div>
@@ -21,15 +21,15 @@
   </div>
 </div>
 
-<% if @show_button %>
-    <%= form_tag animals_path, method: :get do %>
-    <div class="container filter">
-      <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL, params[:search])) %>
-      <%= hidden_field_tag :query, params[:query] %>
-      <%= submit_tag "Filter by Difficulty", class: "filter-btn" %>
-    <% end %>
-  </div>
+
+<%= form_tag animals_path, method: :get do %>
+<div class="container filter">
+  <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL, params[:search])) %>
+  <%= hidden_field_tag :query, params[:query] %>
+  <%= submit_tag "Filter by Difficulty", class: "filter-btn" %>
 <% end %>
+</div>
+
 
 <% if @animals.count.positive? %>
   <h5 class="home-h3">These farm animals are cute and available</h5>
