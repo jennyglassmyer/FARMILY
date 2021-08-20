@@ -487,131 +487,169 @@ booking1 = Booking.create(
   user_id: user_1.id,
   animal_id: animal1.id,
   date_start: Date.new(2021,8,21),
-  date_end: Date.new(2021,8,27)
+  date_end: Date.new(2021,8,27),
+  total_price: 250.0,
+  status: "pending"
 )
 
 booking2 = Booking.create(
   user_id: user_1.id,
   animal_id: animal2.id,
   date_start: Date.new(2021,8,28),
-  date_end: Date.new(2021,8,29)
+  date_end: Date.new(2021,8,29),
+  total_price: 350.0,
+  status: "pending"
 )
 
 booking3 = Booking.create(
   user_id: user_2.id,
   animal_id: animal3.id,
   date_start: Date.new(2021,8,22),
-  date_end: Date.new(2021,9,3)
+  date_end: Date.new(2021,9,3),
+  total_price: 450.0,
+  status: "pending"
 )
 
 booking4 = Booking.create(
   user_id: user_3.id,
   animal_id: animal4.id,
   date_start: Date.new(2021,8,23),
-  date_end: Date.new(2021,9,5)
+  date_end: Date.new(2021,9,5),
+  total_price: 500.0,
+  status: "pending"
 )
 
 booking5 = Booking.create(
   user_id: user_3.id,
   animal_id: animal5.id,
   date_start: Date.new(2021,9,6),
-  date_end: Date.new(2021,9,7)
+  date_end: Date.new(2021,9,7),
+  total_price: 150.0,
+  status: "pending"
 )
 
 booking6 = Booking.create(
   user_id: user_4.id,
   animal_id: animal6.id,
   date_start: Date.new(2021,9,8),
-  date_end: Date.new(2021,9,10)
+  date_end: Date.new(2021,9,10),
+  total_price: 500.0,
+  status: "pending"
 )
 
 booking7 = Booking.create(
   user_id: user_5.id,
   animal_id: animal7.id,
   date_start: Date.new(2021,8,22),
-  date_end: Date.new(2021,9,9)
+  date_end: Date.new(2021,9,9),
+  total_price: 200.0,
+  status: "pending"
 )
 
 booking8 = Booking.create(
   user_id: user_5.id,
   animal_id: animal8.id,
   date_start: Date.new(2021,9,22),
-  date_end: Date.new(2021,9,24)
+  date_end: Date.new(2021,9,24),
+  total_price: 300.0,
+  status: "pending"
 )
 
 booking9 = Booking.create(
   user_id: user_5.id,
   animal_id: animal9.id,
   date_start: Date.new(2021,9,25),
-  date_end: Date.new(2021,9,28)
+  date_end: Date.new(2021,9,28),
+  total_price: 400.0,
+  status: "pending"
 )
 
 booking10 = Booking.create(
   user_id: user_6.id,
   animal_id: animal10.id,
   date_start: Date.new(2021,9,23),
-  date_end: Date.new(2021,9,28)
+  date_end: Date.new(2021,9,28),
+  total_price: 500.0,
+  status: "pending"
 )
 
 booking11 = Booking.create(
   user_id: user_6.id,
   animal_id: animal11.id,
   date_start: Date.new(2021,9,29),
-  date_end: Date.new(2021,10,1)
+  date_end: Date.new(2021,10,1),
+  total_price: 100.0,
+  status: "pending"
 )
 
 booking12 = Booking.create(
   user_id: user_7.id,
   animal_id: animal12.id,
   date_start: Date.new(2021,9,29),
-  date_end: Date.new(2021,10,1)
+  date_end: Date.new(2021,10,1),
+  total_price: 240.0,
+  status: "pending"
 )
 
 booking13 = Booking.create(
   user_id: user_8.id,
   animal_id: animal13.id,
   date_start: Date.new(2021,8,29),
-  date_end: Date.new(2021,10,1)
+  date_end: Date.new(2021,10,1),
+  total_price: 500.0,
+  status: "pending"
 )
 
 booking14 = Booking.create(
   user_id: user_8.id,
   animal_id: animal14.id,
   date_start: Date.new(2021,8,29),
-  date_end: Date.new(2021,10,1)
+  date_end: Date.new(2021,10,1),
+  total_price: 800.0,
+  status: "pending"
 )
 
 booking15 = Booking.create(
   user_id: user_8.id,
   animal_id: animal15.id,
   date_start: Date.new(2021,8,23),
-  date_end: Date.new(2021,9,1)
+  date_end: Date.new(2021,9,1),
+  total_price: 375.0,
+  status: "pending"
 )
 
 booking16 = Booking.create(
   user_id: user_9.id,
   animal_id: animal16.id,
   date_start: Date.new(2021,8,22),
-  date_end: Date.new(2021,9,5)
+  date_end: Date.new(2021,9,5),
+  total_price: 845.0,
+  status: "pending"
 )
 
 booking17 = Booking.create(
   user_id: user_9.id,
   animal_id: animal18.id,
   date_start: Date.new(2021,9,6),
-  date_end: Date.new(2021,9,19)
+  date_end: Date.new(2021,9,19),
+  total_price: 500.0,
+  status: "pending"
 )
 
 booking18 = Booking.create(
   user_id: user_10.id,
   animal_id: animal19.id,
   date_start: Date.new(2021,8,25),
-  date_end: Date.new(2021,9,2)
+  date_end: Date.new(2021,9,2),
+  total_price: 300.0,
+  status: "pending"
 )
 
 booking19 = Booking.create(
   user_id: user_10.id,
   animal_id: animal20.id,
   date_start: Date.new(2021,8,23),
-  date_end: Date.new(2021,9,20)
+  date_end: Date.new(2021,9,20),
+  total_price: 900.0,
+  status: "pending"
 )
