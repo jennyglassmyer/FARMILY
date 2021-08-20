@@ -4,7 +4,7 @@
 }
 
 .bookings-header-h1{
-  font-family: Roboto;
+  font-family: Mulish;
   font-weight: bold;
   text-align: center;
   position: absolute;
@@ -13,17 +13,6 @@
   transform: translate(-50%, -50%);
   color: $dark;
 }
-
-// .bookings-header-h5{
-//   font-family: Roboto;
-//   font-weight: lighter;
-//   text-align: center;
-//   position: absolute;
-//   top: 35%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   color: $dark;
-// }
 
 .list-styling {
   display: inline;
@@ -48,8 +37,8 @@
   align-items: center;
   width: 300px;
   position: absolute;
-  top: 85%;
-  left: 38%;
+  top:62%;
+  left: 40%;
   text-align: center;
   margin-left: 0;
 }
