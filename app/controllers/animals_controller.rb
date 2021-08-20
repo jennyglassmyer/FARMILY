@@ -5,10 +5,10 @@ class AnimalsController < ApplicationController
   def index
     if params[:query].present?
       @animals = Animal.search_by_species_and_name(params[:query])
-      @show_button = true
+      @show_filter = true
     else
       @animals = Animal.all
-      @show_button = false
+      @show_filter = false
       @previous_search = ''
     end
   end

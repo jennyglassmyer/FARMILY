@@ -13,7 +13,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Search a farm animal"
+        placeholder: "Search for type of animal"
       %>
       <%= submit_tag "Go", class: "search-button" %>
     </div>
@@ -32,7 +32,7 @@
 </div>
 
 <h5 class="home-h3">These farm animals are cute and available</h5>
-<% if @show_button %>
+<% if @show_filter %>
 <%= form_tag animals_path, method: :get do %>
       <%= select_tag(:search, options_for_select(Animal::CARE_LEVEL))  %>
       <%= hidden_field_tag :query, params[:query] %>
