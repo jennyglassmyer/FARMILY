@@ -24,4 +24,10 @@ class Animal < ApplicationRecord
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+  before_create :set_address
+  
+  def set_address
+    self.address = user.address
+  end
 end
