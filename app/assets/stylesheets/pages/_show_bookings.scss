@@ -8,22 +8,22 @@
   font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 25%;
+  top: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: $dark;
 }
 
-.bookings-header-h5{
-  font-family: Roboto;
-  font-weight: lighter;
-  text-align: center;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: $iris;
-}
+// .bookings-header-h5{
+//   font-family: Roboto;
+//   font-weight: lighter;
+//   text-align: center;
+//   position: absolute;
+//   top: 35%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   color: $dark;
+// }
 
 .list-styling {
   display: inline;
@@ -33,11 +33,11 @@
   overflow: hidden;
   text-align: center;
   position: absolute;
-  top: 55%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline;
-  color: $iris;
+  color: $dark;
   font-weight: bold;
   border: 2px solid white;
   border-radius: 10px;

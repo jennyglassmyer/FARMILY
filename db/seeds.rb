@@ -258,7 +258,7 @@ animal9 = Animal.create(
   address: user_9.address
   )
 
-  file = URI.open('https://images.unsplash.com/photo-1562543875-13b826ef8e96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
+  file = URI.open('https://images.unsplash.com/photo-1605445200962-9bc91b10da12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
 
   animal9.photos.attach(io: file, filename: 'goose.jpg', content_type: 'image/jpg')
 
