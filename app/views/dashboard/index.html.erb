@@ -2,11 +2,8 @@
   <h1> <%= link_to"〈", root_path, class: "arrow" %> Your Dashboard</h1>
 </div>
 
-<%# <div class="container"> %>
-
   <h5 class="bookings-h5">Your Bookings</h5>
-  <div class="dash-container">
-    <%# <div> %>
+  <div class="your-bookings-container">
       <% if @requests.count.positive? %>
         <% @requests.each do |request| %>
         <div class="booking-card">
@@ -27,13 +24,11 @@
         <p>You haven't booked any farm animals yet! 😢 </p>
         <%= link_to "Search for Farm Animals", root_path, class: "button" %>
       <% end %>
-    <%# </div> %>
   </div>
-<%# </div> %>
 
-
-    <div>
-      <h5 class="bookings-h5">Your Farm Animals for Rent</h5>
+  <div>
+    <h5 class="bookings-h5">Your Farm Animals for Rent</h5>
+    <div class="your-animals-container">
       <% if @animals.count.positive? %>
         <% @animals.each do |animal| %>
           <div class="booking-img-badge position-relative" style="background-image: url(<%= cl_image_path animal.photos.first.key %>)">
@@ -48,3 +43,4 @@
         <%= link_to "Rent Your Farm Animal", new_animal_path, class: "button" %>
       <% end %>
     </div>
+  </div>
