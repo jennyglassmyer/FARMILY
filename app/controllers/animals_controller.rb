@@ -10,6 +10,9 @@ class AnimalsController < ApplicationController
       end
     else
       @animals = Animal.all
+      if params[:search].present?
+        @animals = @animals.where(care_level: params[:search])
+      end
       @previous_search = ''
     end
   end
