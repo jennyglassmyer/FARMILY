@@ -4,6 +4,9 @@ $fuscia: #FCDDEC;
 $dark: rgb(73, 73, 73);
 $border: 2px solid $berbel;
 
+.new-header-booking {
+  color: $dark;
+}
 
 #booking-container{
   display: flex;
@@ -18,13 +21,13 @@ $border: 2px solid $berbel;
 
 .booking-details {
   border: $border;
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 20px;
 }
 
 .date-booking {
   border: $border;
-  border-radius: 30px;
+  border-radius: 15px;
   margin: 20px;
   padding: 20px;
   padding-bottom: 5px;

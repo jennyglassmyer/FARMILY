@@ -17,6 +17,7 @@ $dark: rgb(73, 73, 73);
 
 #login-form {
   padding-top: 50px;
+  padding-bottom: 30px;
   border: 2px solid $iris;
   border-radius: 50px;
   margin-bottom: 40px;
@@ -31,7 +32,7 @@ $dark: rgb(73, 73, 73);
 
 .login-btn {
   display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 .login-categories {
@@ -41,6 +42,43 @@ $dark: rgb(73, 73, 73);
   margin-bottom: 20px;
 }
 
+.registration-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup {
+  color: $dark;
+}
+
+.login-button {
+  width: 100%;
+  &:hover {
+    background-color: white;
+    color: $iris;
+    border: 1px solid $iris;
+  }
+}
+
+.signup:hover {
+    color: $iris;
+}
+
+.forgot-password {
+  display: flex;
+  color: $dark;
+  flex-grow: 1;
+}
+
+.forgot-password:hover {
+  color: $iris;
+}
+
+.signup,
+.forgot-password {
+  border: none;
+  padding: 0;
+}
 // .form-control {
 //   border-radius: 8px;
 //   background-color: #E5E5E5;
