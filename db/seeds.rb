@@ -13,7 +13,7 @@ user_1 = User.create(
 
 user_2 = User.create(
   first_name: "Philip",
-  last_name: "Nordy",
+  last_name: "Nordmeyer",
   email: "nordy@nordy.com",
   address: "Stephanstraße 24, 10559 Berlin, Berlin, Germany",
   password: "123456"
@@ -54,15 +54,15 @@ user_6 = User.create(
 user_7 = User.create(
   first_name: "Suzie",
   last_name: "DiMarzio",
-  email: "malanie@gmail.com",
+  email: "suzie@gmail.com",
   address: "2 Park Ln, London W1J 7EY, Great Britain",
   password: "123456"
 )
 
 user_8 = User.create(
-  first_name: "Franz",
-  last_name: "Oblast",
-  email: "franze@gmail.com",
+  first_name: "Christine",
+  last_name: "McDonald",
+  email: "christine@gmail.com",
   address: "Frankfurter Straße 9, 34117 Kasssel, Hessen, Germany",
   password: "123456"
 )
@@ -78,7 +78,7 @@ user_9 = User.create(
 user_10 = User.create(
   first_name: "Felix",
   last_name: "Magnus",
-  email: "fekix@gmail.com",
+  email: "felix@gmail.com",
   address: "Bürgergasse 12, 8010 Graz, Austria",
   password: "123456"
 )
@@ -89,11 +89,11 @@ animal1 = Animal.create(
   breed: "Trakehner",
   gender: "Male",
   personality: "Empathetic",
-  description: "An attentive companion, very smart and entertaining",
+  description: "An attentive companion, very smart and entertaining.",
   care_level: "Hard",
   age: 5,
   price_per_day: 150,
-  care_instructions: "Need fresh hey every day, 10 litres of water, no alcohol, please, had a former addiction.",
+  care_instructions: "Needs fresh hey every day and 10 litres of water. No alcohol please, had a former addiction.",
   user_id: user_1.id,
   address: user_1.address
   )
@@ -108,11 +108,11 @@ animal2 = Animal.create(
   species: "Pig",
   gender: "Male",
   personality: "Funny",
-  description: "A mate who rolls with joy and is very clean.",
+  description: "Friendly guy who rolls with joy and is very clean.",
   care_level: "Medium",
   age: 7,
   price_per_day: 80,
-  care_instructions: "Needs 10 Kilos of food per day, loves fried vegetables and a lot of hugging. No sweets please.",
+  care_instructions: "Needs 10 kilos of food per day, loves fried vegetables and a lot of hugging. No sweets please.",
   user_id: user_2.id,
   address: user_2.address
 )
@@ -128,12 +128,12 @@ animal3 = Animal.create(
   species: "Cat",
   breed: "Maine Coon",
   gender: "Female",
-  personality: "Cuddly and strong-willed",
+  personality: "Cuddly and strong-willed.",
   description: "An elegant lady who gives you a smile and makes your days happy.",
   care_level: "Easy",
   age: 3,
   price_per_day: 80,
-  care_instructions: "Feed twice daily and lots of pets.",
+  care_instructions: "Feed twice daily and give lots of pets.",
   user_id: user_3.id,
   address: user_3.address
   )
@@ -168,8 +168,8 @@ animal5 = Animal.create(
   species: "Goat",
   breed: "Horneter",
   gender: "Male",
-  personality: "Could be very stubborn",
-  description: "Very entertaining",
+  personality: "Stubborn",
+  description: "Very entertaining!",
   care_level: "Easy",
   age: 2,
   price_per_day: 45,
@@ -209,7 +209,7 @@ animal7 = Animal.create(
   breed: "Furr Funny",
   gender: "Female",
   personality: "Slow",
-  description: "Snoring during sleep",
+  description: "Snores during sleep.",
   care_level: "Easy",
   age: 7,
   price_per_day: 30,
@@ -228,12 +228,12 @@ animal8 = Animal.create(
   species: "Duck",
   breed: "Grey Breeder",
   gender: "Female",
-  personality: "choleric",
+  personality: "Chaotic",
   description: "Flaps her wings in her sleep because she dreams of flying. But has never learned to fly.",
   care_level: "Easy",
   age: 7,
   price_per_day: 30,
-  care_instructions: "Is extremely affectionate. Climbs into bed if you don't keep her off with potato chips.",
+  care_instructions: "Duck food and hershey's kisses.",
   user_id: user_8.id,
   address: user_8.address
   )
@@ -248,12 +248,12 @@ animal9 = Animal.create(
   species: "Goose",
   breed: "Lone Chatterer",
   gender: "Female",
-  personality: "Convincing and heroic when danger threatens",
+  personality: "Heroic when danger threatens",
   description: "Shrieks when strangers approach. Don't use drugs to calm her.",
   care_level: "Easy",
   age: 7,
   price_per_day: 30,
-  care_instructions: "Grains, water and attention feed her well",
+  care_instructions: "Grains, water and attention feed her well.",
   user_id: user_9.id,
   address: user_9.address
   )
@@ -266,14 +266,14 @@ animal9 = Animal.create(
 animal10 = Animal.create(
   name: "Hero",
   species: "Dog",
-  breed: "Shepherd dog",
+  breed: "Shepherd",
   gender: "Male",
   personality: "Very intuitive. Can read your mind.",
-  description: "Very sensitive. Does not tolerate quarrels.Always takes sides with the weaker party.",
+  description: "Does not tolerate quarrels. Always takes sides with the weaker party.",
   care_level: "Easy",
   age: 7,
   price_per_day: 100,
-  care_instructions: "Is a real gourmet. Likes lamb with rice and steamed vegetables",
+  care_instructions: "Is a real gourmet. Likes lamb with rice and steamed vegetables.",
   user_id: user_10.id,
   address: user_10.address
   )
@@ -289,12 +289,12 @@ animal11 = Animal.create(
   species: "Horse",
   breed: "Arabian White",
   gender: "Female",
-  personality: "quick-tempered",
-  description: "Needs a steady hand and clear guidance",
+  personality: "Quick-tempered",
+  description: "Needs a steady hand and clear guidance.",
   care_level: "Hard",
   age: 5,
   price_per_day: 150,
-  care_instructions: "Loves brats, apples and peaches. Sugar is forbidden. Has elevated levels.",
+  care_instructions: "Loves brats, apples and peaches. Sugar is forbidden. Has elevated glucose levels.",
   user_id: user_1.id,
   address: user_1.address
   )
@@ -329,11 +329,11 @@ animal13 = Animal.create(
   breed: "Mixed",
   gender: "Female",
   personality: "Idiosyncratic",
-  description: "Goes her very own way.",
+  description: "Goes her own way.",
   care_level: "Easy",
   age: 2,
   price_per_day: 90,
-  care_instructions: "If there are a lot of mice. She dosn't need more. She is a very skilled hunter.",
+  care_instructions: "If there are a lot of mice for her to hunt she dosn't need any adittional food. She is a very skilled hunter.",
   user_id: user_4.id,
   address: user_4.address
   )
@@ -346,14 +346,14 @@ animal13 = Animal.create(
 animal14 = Animal.create(
   name: "Jade",
   species: "Cow",
-  breed: "Bawarian Stomper",
+  breed: "Bavarian Stomper",
   gender: "Female",
   personality: "Introverted",
   description: "A great milk cow!",
   care_level: "Medium",
   age: 3,
   price_per_day: 50,
-  care_instructions: "Good grass in the Garden would do. Drinks only mineral water.",
+  care_instructions: "Good grass in the garden would do. Drinks only mineral water.",
   user_id: user_3.id,
   address: user_3.address
   )
@@ -386,7 +386,7 @@ animal15 = Animal.create(
 animal16 = Animal.create(
   name: "Digger",
   species: "Chicken",
-  breed: "Whild Rooster",
+  breed: "Wild Rooster",
   gender: "Male",
   personality: "Loner",
   description: "Hates to be disturbed",
@@ -404,16 +404,16 @@ animal16 = Animal.create(
 
 
 animal17 = Animal.create(
-  name: "Moroon",
+  name: "Hariet",
   species: "Sheep",
-  breed: "Woll Spender",
-  gender: "Male",
+  breed: "Wool Spender",
+  gender: "Female",
   personality: "Egocentric",
   description: "Wants attention all the time",
   care_level: "Medium",
   age: 7,
   price_per_day: 37,
-  care_instructions: "Is extremely affectionate. Climbs into bed if you don't keep her off with potato chips.",
+  care_instructions: "Needs a large pasture and friends.",
   user_id: user_8.id,
   address: user_8.address
   )
@@ -424,16 +424,16 @@ animal17 = Animal.create(
 
 
 animal18 = Animal.create(
-  name: "Maximo",
+  name: "Sam",
   species: "Duck",
-  breed: "Small flutterer",
+  breed: "Small Flutterer",
   gender: "Male",
   personality: "Patient",
   description: "Very lazy.",
   care_level: "Easy",
   age: 0.5,
   price_per_day: 5,
-  care_instructions: "Needs a lot of sleep.",
+  care_instructions: "Needs a lot of sleep and coffee.",
   user_id: user_7.id,
   address: user_7.address
   )
@@ -464,7 +464,7 @@ animal19 = Animal.create(
 
 
 animal20 = Animal.create(
-  name: "Yucky",
+  name: "Spot",
   species: "Dog",
   breed: "Japanese Shepherd",
   gender: "Female",
