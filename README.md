@@ -1,6 +1,6 @@
 # farmily
 <h3 align="center">
-  <img src="app/assets/images/Screenshot 2021-09-07 at 10.11.11.png" width="800px">
+  <img src="app/assets/images/Screenshot 2021-09-07 at 10.16.56.png" width="800px">
 </h3>
 
 Farmily is an app that connects farmers/farm animal owners with users who want to rent a farm animal for work or fun.
